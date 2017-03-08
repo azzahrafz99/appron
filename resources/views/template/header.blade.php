@@ -13,6 +13,8 @@
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="{{ asset('assets')}}/css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ asset('assets')}}/css/bootstrap.css">
+
   <link rel="stylesheet" href="{{ asset('assets' )}}/css/demo.css">
   <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{{ asset('assets' )}}/css/adaptive-menu.default.css">
@@ -52,4 +54,3 @@
   <div class="content-wrapper">
       @yield('content')
   </div>
-  
