@@ -12,14 +12,14 @@
 */
 
 
-
-Route::group(['middleware' => 'auth'], function(){
-  Route::get('/home', 'HomeController@index');
-
-  Route::get('/resep', 'ResepController@index');
-  Route::get('/resep/add', 'ResepController@create');
-  Route::post('/resep/create', 'ResepController@store');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-//
-// Route::auth();
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/resep', 'ResepController@index');
+Route::get('/resep/add', 'ResepController@create');
+Route::post('/resep/store', 'ResepController@store');
