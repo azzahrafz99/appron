@@ -62,6 +62,36 @@ class ResepController extends Controller
       //   Resep::create($input);
       // // }
 
+      // $input = $request->all();
+      // $status = \App\Resep::create($input);
+
+      $rules = [
+        'id_resep'      => 'required|unique:t_resep',
+        'id_resep'      => 'required',
+        'judul'         => 'required',
+        'deskripsi'     => 'required',
+        'bahan'         => 'required',
+        'cara_memasak'  => 'required',
+        'foto'          => 'required|mimes:jpeg,png|max:512',
+        'video'         => 'required'
+      ];
+
+      $this->validate($request, $rules);
+
+      $input = $request->all();
+
+      if($request->hasFile('foto') && $request->file('foto')->isValid()){
+        $filename = $input['id_user'] . "." . $request->file('foto')->getClientOriginalExtension();
+        $request->file('foto')->storeAs('', $filename);
+        $input['foto'] = $filename;
+      }
+      //
+      // if($request->hasFile('video') && $request->file('video')->isValid()){
+      //   $filename = $input['id_user'] . "." . $request->file('video')->getClientOriginalExtension();
+      //   $request->file('video')->storeAs($filename, $filename);
+      //   $input['video'] = $filename;
+      // }
+
       return "berhasil";
 
 

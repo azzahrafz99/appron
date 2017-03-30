@@ -2,7 +2,7 @@
   <img src="{{ asset('assets') }}/img/logo.png" width="60px">
 </div>
 <div class="layout-centers">
-  <div class="wrapmenus">
+  <div class="wrapmenus color-white">
     <nav>
       <ul class="navs menus topmenu">
         <li><a href="#">Home</a></li>

@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 Auth::routes();
@@ -22,4 +22,4 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/resep', 'ResepController@index');
 Route::get('/resep/add', 'ResepController@create');
-Route::post('/resep/store', 'ResepController@store');
+Route::post('/resep/add', 'ResepController@store');

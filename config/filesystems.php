@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'local',
+    'default' => 'uploads',
 
     /*
     |--------------------------------------------------------------------------
@@ -61,6 +61,12 @@ return [
             'region' => 'your-region',
             'bucket' => 'your-bucket',
         ],
+
+        'upload' =>[
+          'driver' => 'local',
+          'root' => storage_path('app/public/uploads'),
+          'visibility' => 'public'
+        ]
 
     ],
 
